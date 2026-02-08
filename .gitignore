@@ -1,0 +1,11 @@
+# Audio files
+*.wav
+*.wave
+*.aiff
+*.aif
+*.flac
+*.mp3
+*.ogg
+
+# SuperCollider recordings
+Recordings/
