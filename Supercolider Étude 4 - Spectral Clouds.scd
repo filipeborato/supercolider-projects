@@ -31,7 +31,7 @@ SynthDef(\fmPseudo3D_cloud, {
     // Síntese FM
     mod = SinOsc.ar(freq * modRatio, 0, modIndex * (freq * modRatio));
     car = SinOsc.ar(freq + mod);
-
+    
     // Filtro de "Distância" (mais longe = mais abafado)
     car = LPF.ar(car, 18000 / (1 + (dist * 10)));
 
@@ -55,7 +55,7 @@ SynthDef(\fmPseudo3D_cloud, {
     // Elevação (Up/Down -> Spectral notches)
     upAmt = elev.clip(0, 1);
     downAmt = (1 - upAmt).max(0); // Assumindo elev 0 a 1 para simplificar, ou mapear -1..1
-
+    
     // Notch para simular HRTF de elevação
     notchHz = (6000 * downAmt + 10000 * upAmt).clip(4000, 12000);
     sig = BPeakEQ.ar(sig, notchHz, 0.7, -8);
