@@ -11,3 +11,7 @@
 Recordings/
 
 .vscode/
+
+# Ignorar arquivos de genealogia
+*Genealogia*
+*genealogia*
