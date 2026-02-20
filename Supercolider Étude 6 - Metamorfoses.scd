@@ -34,7 +34,7 @@ s.waitForBoot({
 
         // FILTRO PASSA-ALTA (HPF): Remove DC e subgraves inaudíveis (< 30Hz)
         sig = HPF.ar(sig, 30);
-
+        
         // LIMITER SUAVE: Garante que nada exceda 1.0 (evita corte do driver)
         sig = sig.tanh;
 
