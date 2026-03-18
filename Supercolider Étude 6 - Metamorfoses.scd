@@ -122,7 +122,7 @@ s.waitForBoot({
                 \freq, Pwhite(800.0, 2500.0),
                 \modRatio, 1, \modIndex, 0.2,
                 \noiseAmt, 0.2,
-                \amp, Pseg([0.0, 0.03], [60], \exp),
+                \amp, Pseg([0.001, 0.03], [60], \exp),
                 \pan, Pwhite(-0.8, 0.8),
                 \dist, 0.7
             )
